@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+    Copyright © 2026 Roman Pasichnyk
+    SPDX-License-Identifier: OSL-3.0 OR AFL-3.0
+
+    Fields added to Zero_Core's Stores > Configuration > Zero > Theme >
+    Product Badges, next to New and Sale.
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="zero_theme">
+            <group id="badges">
+                <field id="custom" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>The Product's Own Badge</label>
+                    <comment>The text of the product's "Badge" attribute (Catalog > Products > a product), e.g. Bestseller, Limited, Vegan.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="low_stock_qty" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>"Only a Few Left" At</label>
+                    <comment>The badge when this many or fewer can still be sold (simple and virtual products with managed stock). 0 turns it off.</comment>
+                    <validate>validate-zero-or-greater</validate>
+                </field>
+                <field id="free_shipping" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Free Shipping</label>
+                    <comment>When the product's price alone reaches the minimum order of the Free Shipping method (Sales > Delivery Methods > Free Shipping, while it is enabled).</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

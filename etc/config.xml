@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+    Copyright © 2026 Roman Pasichnyk
+    SPDX-License-Identifier: OSL-3.0 OR AFL-3.0
+
+    In Zero_Core's group (zero_theme/badges), next to New and Sale.
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <zero_theme>
+            <badges>
+                <custom>1</custom>
+                <low_stock_qty>0</low_stock_qty>
+                <free_shipping>0</free_shipping>
+            </badges>
+        </zero_theme>
+    </default>
+</config>

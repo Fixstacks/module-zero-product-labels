@@ -1,0 +1,20 @@
+/* Built into the Zero theme's CSS while Zero_ProductLabels is enabled; the
+   same layer as the theme's own .product-badge rules (New, Sale). */
+@layer utilities {
+    /* The product's own badge (its "Badge" attribute). */
+    .product-badge-custom {
+        background: var(--color-accent);
+        color: var(--color-accent-content);
+    }
+
+    .product-badge-low-stock {
+        background: var(--color-warning);
+        color: var(--color-warning-content);
+    }
+
+    .product-badge-free-shipping {
+        background: var(--color-base-100);
+        color: var(--color-base-content);
+        box-shadow: inset 0 0 0 1px currentColor;
+    }
+}
